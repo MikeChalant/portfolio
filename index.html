@@ -56,6 +56,35 @@
 	</head>
 	<body>
 
+
+		<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="104294407857605"
+			  theme_color="#333333"
+			  logged_in_greeting="Hi! How can i be of service?"
+			  logged_out_greeting="Hi! How can i be of service?">
+      </div>
+
+
 		<div id="myButton"></div>
 
 	<div id="-mikelabs-page">
@@ -192,14 +221,14 @@
 									<div class="hire">
 										<h3>Your Brand New Year Resolution.</h3>
 										<h2> Get Your Brand Audit<br/> Plan For Its Future</h2>
-										<a href="#" class="btn-hire">Hire me</a>
+										<a href="#" class="btn-hire" data-toggle="modal" data-target="#hireModal">Hire me</a>
 									</div>
 								</div>
 								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 									<div class="hire">
 										<h3>Mastering Your Brand Success.</h3>
 										<h2> Get Your Brand Guildlines.</h2>
-										<a href="#" class="btn-hire">Hire me</a>
+										<a href="#" class="btn-hire" data-toggle="modal" data-target="#hireModal">Hire me</a>
 									</div>
 								</div>
 							</div>
@@ -943,6 +972,44 @@
 		</div><!-- end:-mikelabs-main -->
 	</div><!-- end:container-wrap -->
 	</div><!-- end:-mikelabs-page -->
+
+	<!-- fusiion Modal -->
+	<div class="modal fade" id="hireModal" tabindex="-1" role="dialog" aria-labelledby="hireModalTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="fusionModalTitle">Hire Me</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+
+					<div class="row">
+					<div class="col-md-4">
+						<div class="-mikelabs-icon">
+							<i class="icon-facebook2"></i>
+						</div>
+						<div class="-mikelabs-icon">
+							<i class="icon-whatsapp"></i>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="con">
+							<h4 style="line-height:30px;">Hello, For A More Personalized Experience, Consider Leaving Me A Message On Facebook Messenger By Clicking On The Messenger Chat Icon On The Bottom Right Of The Screen Or Vias Whatsapp To Your Left</h4>
+						</div>
+					</div>
+				</div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- endof Modal -->
 
 	<!-- GoldeBlack Modal -->
 	<div class="modal fade" id="goldenBlackModal" tabindex="-1" role="dialog" aria-labelledby="goldenBlackModalTitle" aria-hidden="true">
